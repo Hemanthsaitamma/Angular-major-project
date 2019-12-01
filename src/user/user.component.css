@@ -1,0 +1,10 @@
+.search{
+    margin-left:1000px;
+}
+tr:nth-child(even){
+    background:lightgreen;
+    color:white;
+}
+tr:nth-child(odd){
+    background: coral;
+}

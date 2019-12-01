@@ -1,0 +1,16 @@
+
+<div class="container w-50 mt-5">
+    <div class="card">
+        <div class="card-header bg-dark text-white text-center">
+           <h2>This is {{updateuser.name}}</h2> 
+        </div>
+        <div class="card-body bg-primary text-center text-white">
+            <h5>Id : {{updateuser.id}}</h5>
+            <h5>Name : {{updateuser.name}}</h5>
+            <h5>Email : {{updateuser.email}}</h5>
+            <h5>Address : {{updateuser.address.city}}</h5>
+            <button class="btn btn-danger" (click)="clickHere()">Cancel</button>
+           
+        </div>
+    </div>
+</div>

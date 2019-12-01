@@ -1,0 +1,14 @@
+<accordion class="container w-50  mt-5">
+    <div class="card">
+        <div class="card-header bg-success">
+        <accordion-group heading= " ID :{{item.id}}" *ngFor="let item of data" class="mt-5">
+          <div class="card-body bg-danger text-white">
+              <h6> ID is :{{item.id}}</h6>
+              <h6> Title is :{{item.title}}</h6>
+              <h6> Body is :{{item.body}}</h6>
+          </div>
+        </accordion-group>
+        </div>
+        </div>
+        
+      </accordion>

@@ -1,0 +1,24 @@
+<table class="table table-bordered mt-5 w-50 ml-5">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+
+        </tr>
+    </tbody>
+</table>
+<div class="row no-gutters">
+    <div class="col-xs-12 col-12">
+      <pagination [totalItems]="66" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+    </div>
+  </div>
+   
+  

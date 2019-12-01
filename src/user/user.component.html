@@ -1,0 +1,62 @@
+
+
+
+
+<ng-select class="custom mt-5 w-25 search" (change)="clickHere($event)" [items]=data bindLabel="name" bindValue="id"></ng-select>
+
+<table class="table  container mt-5">
+    <thead>
+        <tr class="bg-info">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <td  tooltip="{{item.id}}">{{ item.id }}</td>
+            <td> <button class="btn btn-outline-dark" popover="{{item.name}}"> {{ item.name }}</button>  </td>
+            <td  tooltip="{{item.email}}"> {{ item.email }} </td>
+            <td  tooltip="{{item.address.city}}"> {{ item.address.city }} </td>
+            <td>
+                <button class="btn btn-outline-success" (click)="editClick(item.id)">EDIT</button>
+                <button class="btn btn-outline-primary ml-2" (click)="openModal(template)" >ViewMore</button>
+                <ng-template #template>
+                    <div class="modal-header bg-success text-white">
+                      <h4 class="modal-title pull-left">This is {{item.name}} data</h4>
+                      <button type="button" class="close pull-right text-white" aria-label="Close" (click)="modalRef.hide()">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mr-5">
+                        <div class="form-group">
+                            <label>Id</label>
+                            <input type="text" class="form-control" value="{{item.id}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" value="{{item.name}}">
+                        </div>
+                        <div class="form-group">
+                            <label>email</label>
+                            <input type="text" class="form-control" value="{{item.email}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control" value="{{item.address.city}}">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-danger" (click)="userEditform(item.id)" (click)="modalRef.hide()">Cancel</button>
+                            <button class="btn btn-success ml-4">Submit</button>
+                        </div>
+                      
+                      
+                    </div>
+                  </ng-template>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

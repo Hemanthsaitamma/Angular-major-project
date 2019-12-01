@@ -1,0 +1,19 @@
+<div class="container w-25">
+    <h3 class="text-center text-primary my-5">USER EDIT FORM</h3>
+    <div class="form-group">
+        <label>Id</label>
+        <input type="text" class="form-control" value="{{updateuser.id}}"/>
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" value="{{updateuser.name}}"/>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" value="{{updateuser.email}}"/>
+    </div>
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-success mr-3">Updata</button>
+        <button class="btn btn-danger" (click)="cancelHere()">Cancel</button>
+    </div>
+</div>
